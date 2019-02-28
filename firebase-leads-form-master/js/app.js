@@ -14,8 +14,11 @@ var config = {
   
   const //send leads
         name = document.querySelector('#name'),
+        nameat = document.querySelector('#nameat'),
         email = document.querySelector('#email'),
+        lp = document.querySelector('#lp'),
         phone = document.querySelector('#phone'),
+        nameuser = document.querySelector('#nameuser'),
         alert = document.querySelector('.alert'),
         button = document.querySelector('.send-form')
 
@@ -37,6 +40,9 @@ var config = {
       constructor() {
             this.name =  name.value,  
             this.email = email.value,
+            this.nameat = nameat.value,
+            this.lp = lp.value,
+            this.nameuser = nameuser.value,
             this.phone = phone.value,
             this.date = new Date().toISOString().replace('-', '/').split('T')[0].replace('-', '/'),
             this.time = new Date().getTime()
@@ -53,12 +59,15 @@ var config = {
           name.value = '' 
           email.value = ''
           phone.value = ''
+          lp.value = ''
+          nameuser.value = ''
+          nameat.value = ''
     }
 
   //validate inputs   
 
   const validateForm = () => { 
-    if(name.value   === '' || email.value === '' || phone.value === '') {
+    if(name.value   === '' || email.value === '' || phone.value === '' || nameat.value === '' || lp.value === '' || nameuser.value === '') {
         alert.classList.add('alert-danger','display')
         alert.innerHTML = 'one or more ipunts have wrong value , try agin  &#x1F915; '
         cleanForm()
