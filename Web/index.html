@@ -1,0 +1,39 @@
+<html>
+<head>
+  <title>Firebase Login</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <h2 style="text-align: center;color:054f77 ;">Trabalho de Sistemas Distribuidos</h2>
+    <img src="home.png" style="height: 300px; width: 400px;margin-left: 470px;margin-bottom: -120px">
+  <div id="login_div" class="main-div">
+
+    <input type="email" placeholder="Email..." id="email_field" />
+    <input type="password" placeholder="Password..." id="password_field" />
+
+    <button onclick="login()">Entrar</button>
+  </div>
+
+  <div id="user_div" class="loggedin-div">
+  </div>
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBMSH1zZsSG68zpt-Gcxu84khY3Ssj9ilM",
+        authDomain: "trabalhosd-42282.firebaseapp.com",
+        databaseURL: "https://trabalhosd-42282.firebaseio.com",
+        projectId: "trabalhosd-42282",
+        storageBucket: "trabalhosd-42282.appspot.com",
+        messagingSenderId: "94103743829"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="index.js"></script>
+
+</body>
+</html>

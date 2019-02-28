@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyBMSH1zZsSG68zpt-Gcxu84khY3Ssj9ilM",
+        authDomain: "trabalhosd-42282.firebaseapp.com",
+        databaseURL: "https://trabalhosd-42282.firebaseio.com",
+        projectId: "trabalhosd-42282",
+        storageBucket: "trabalhosd-42282.appspot.com",
+        messagingSenderId: "94103743829"
+    };
+    firebase.initializeApp(config);
+    </script>
+    <script src="Js/dados.js"></script>
+
+    <title>SD</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-7">
+                <!--Tabela com os dados-->
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Nome do Trabalho</th>
+                            <th>Nome do Autor</th>
+                            <th>Linguagem de Programação</th>
+                            <th>Endereço no Git-Hub</th>
+                            <th>Usuario</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody id="tbody-table-dados">
+
+                    </tbody>
+                </table>
+            </div>
+            
+            <!--Espaço para organizar-->
+            <div class="col-sm-1">
+            </div>
+
+            
+            <div class="col-sm-4">
+                <!--Coluena de Edição e inserção dos dados-->
+                <form id="form-dates">
+                    <div class="form-group">
+                        <label for="Inserir-trabalho">Nome do Trabalho</label>
+                        <input type="text" class="form-control" name="nomeTrabalho" value="" id="Inserir-curso">                        
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Inserir-autor">Nome do autor</label>
+                        <input type="text" class="form-control" name="nomeAutor" value="" id="Inserir-autor">                        
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Inserir-linguagem">Linguagem de programação</label>
+                        <input type="text" class="form-control" name="linguagem" value="" id="Inserir-linguagem">                        
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Inserir-git">Endereço no git-hub</label>
+                        <input type="text" class="form-control" name="enderecoGit" value="" id="Inserir-git">                        
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Inserir-usuario">Usuário</label>
+                        <input type="text" class="form-control" name="usuario" value="" id="Inserir-usuario">                        
+                    </div>
+
+                    <div class="form-group">
+                            <label for="Inserir-Senha">Senha</label>
+                            <input type="password" class="form-control" name="senha" value="" id="Inserir-senha">                        
+                    </div>
+
+                    <input type="submit" name="" value="enviar" id="botao-enviar">
+                    
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>
